@@ -1,2 +1,35 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<html>
+<head>
+
+	<link rel="stylesheet" href="/css/bootstrap.css" type="text/css" media="all" charset="utf-8">
+
+</head>
+<body>
+	<div class="form-wrapper">
+		<form action="/commits" method="GET">
+			<div class="form-group">
+				<label for="username">Github Username</label>
+				<input type="text" class="form-control" name="user" id="username" placeholder="Enter username">
+			</div>
+			<div class="form-group">
+				<label for="repo">Repository</label>
+				<input type="text" class="form-control" name="repo" id="repo" placeholder="Enter repository name">
+			</div>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+		<div>
+			{{ notFound }}
+		</div>
+	</div>
+
+	<div>
+		<pre>
+			{{ commitFeed }}
+		</pre>
+	</div>
+
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+
+</body>
+</html>

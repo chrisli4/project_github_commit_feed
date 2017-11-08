@@ -1,8 +1,7 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
+.form-wrapper {
+	padding: 30px;
+	margin: 50px auto;
+	width: 800px;
+    border-width: 2px;
+    border: solid #f7f7f9;
 }
