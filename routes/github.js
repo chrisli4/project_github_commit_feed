@@ -21,7 +21,7 @@ router.post('/webhooks', (req, res) => {
 		console.log(content);
 
 		res.writeHead(200, _headers);
-		res.end('ok');
+		res.end('ok!');
 
 	});
 
