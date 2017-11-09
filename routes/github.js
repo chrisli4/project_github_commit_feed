@@ -16,16 +16,8 @@ router.post('/webhooks', (req, res) => {
 	};
 
 	res.writeHead(200, _headers);
-
-	req.on('data', (data) => {
-		content += data;
-	});
-
-	req.on('end', () => {
-		var data = JSON.parse(content);
-		res.end('200');
-	});
-
+	res.statusCode = 200;
+	res.end('ok');
 
 });
 
