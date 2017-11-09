@@ -6,8 +6,6 @@ var router = express.Router();
 
 router.post('/webhooks', (req, res) => {
 
-	console.log(req);
-
 	var _headers = {
 	  "Content-Type": "text/html",
 	  "Access-Control-Allow-Origin": "*",
@@ -16,7 +14,6 @@ router.post('/webhooks', (req, res) => {
 	};
 
 	res.writeHead(200, _headers);
-	res.statusCode = 200;
 	res.end('ok');
 
 });
