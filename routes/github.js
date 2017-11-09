@@ -13,8 +13,17 @@ router.post('/webhooks', (req, res) => {
 	  "Access-Control-Allow-Methods": "GET, POST, PUT, PATCH, DELETE"
 	};
 
-	res.writeHead(200, _headers);
-	res.end('ok');
+	req.on('data', (data) => {
+		content += data;
+	});
+
+	req.on('end', () => {
+		console.log(content);
+
+		res.writeHead(200, _headers);
+		res.end('ok');
+
+	});
 
 });
 
