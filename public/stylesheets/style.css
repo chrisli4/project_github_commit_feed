@@ -1,7 +1,16 @@
+
+
 .form-wrapper {
 	padding: 30px;
 	margin: 50px auto;
-	width: 800px;
+	width: 1000px;
     border-width: 2px;
     border: solid #f7f7f9;
+}
+
+.entry {
+	padding: 30px;
+	margin: 10px auto;
+	width: 1000px;
+    color: #656565;
 }
