@@ -1,11 +1,30 @@
 
 
+/*
+label {
+	color: #F96D6E;
+    font-size: 14px;
+    letter-spacing: .5px;
+    font-family: 'Raleway', sans-serif !important;
+    text-transform: uppercase;
+    text-align: left;
+    vertical-align: baseline;
+}
+
+input {
+    margin: 10px 0 20px;
+    outline: none;
+    color: #000;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+
+
 .form-wrapper {
 	padding: 30px;
 	margin: 50px auto;
 	width: 1000px;
-    border-width: 2px;
-    border: solid #f7f7f9;
+	background-color: #fff;
 }
 
 .entry {
@@ -14,3 +33,4 @@
 	width: 1000px;
     color: #656565;
 }
+*/

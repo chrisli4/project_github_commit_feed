@@ -26,10 +26,9 @@ router.get('/commits', function(req, res, next) {
 
 		if(results === '404') {
 
-			let found = 'Repository Not Found!';
 			let parsed = parser.convert(commits);
 
-			res.render('index', { commitFeed: parsed, found: found });
+			res.render('index', { commitFeed: parsed, status: 'commits not found', found: parsed.length });
 
 		} else {
 
@@ -42,7 +41,7 @@ router.get('/commits', function(req, res, next) {
 			fs.writeFile('./data/commits.json', dataJSON, (error) => {
 				if(error) console.log('Fail to write file');
 
-				res.render('index', { commitFeed: parsed, found: found });
+				res.render('index', { commitFeed: parsed, status: 'commits found', found: parsed.length });
 
 			});
 		}
@@ -63,7 +62,7 @@ router.get('/filter', function(req, res, next) {
 	const parsed = parser.convert(filtered);
 	const sorted = sorter.process(select, direct, parsed);
 
-	res.render('index', { commitFeed: sorted });
+	res.render('index', { commitFeed: sorted, status: 'commits filtered', found: sorted.length });
 
 });
 

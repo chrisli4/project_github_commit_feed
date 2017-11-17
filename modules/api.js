@@ -9,7 +9,7 @@ git.getCommits = (owner, repo, done) => {
 
 	github.authenticate({
 		type: 'token',
-		token: '85e6343c92b565dc1230041d197e1eb170d90b8c'	
+		token: 'd53072df4ed6803312a0f5afc93be0ae451b0e3a'	
 	});
 
 	github.repos.getCommits({ owner: owner, repo: repo }, (error, commits) => {
@@ -21,12 +21,16 @@ git.getCommits = (owner, repo, done) => {
 };
 
 git.extract = (data) => {
+
+		console.log(data);
+
 		return data.map((item) => {
 			return { 
 						sha: item.sha,
 					 	author: item.commit.author.name,
 					 	date: item.commit.author.date,
 					 	email: item.commit.author.email,
+					 	count: item.commit.comment_count,
 					 	url: item.author.url,
 					 	html: item.html_url,
 					 	message: item.commit.message
